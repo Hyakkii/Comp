@@ -37,7 +37,7 @@ echo ============================================================
 echo Installing XboX Insider Hub
 echo ============================================================
 echo.
-%PScommand% %Add% "*FlightDashboard*.appx"
+%PScommand% %Add% "*XboxApp*.appx"
 echo.
 echo ============================================================
 echo XboX Insider Hub Installed!
@@ -64,27 +64,18 @@ if "%op%"=="2" goto :x64
 if "%op%"=="3" goto :x86
 
 :Arm
-if not exist "Arm\*NET.Native.Framework*2.1*arm*.appx" goto :nofiles
-if not exist "Arm\*NET.Native.Runtime*2.1*arm*.appx" goto :nofiles
+if not exist "Arm\*Framework*2.1*arm*.appx" goto :nofiles
+if not exist "Arm\*Runtime*2.1*arm*.appx" goto :nofiles
 if not exist "Arm\*Microsoft.VCLibs*140*arm*.appx" goto :nofiles
+if not exist "Arm\*Framework*1.7*arm*.appx" goto :nofiles
+if not exist "Arm\*Runtime*1.7*arm*.appx" goto :nofiles
+if not exist "Arm\*UWPDesktop*arm*.appx" goto :nofiles
 echo.
 echo ============================================================
-echo Installing Microsoft.NET.Native.Framework.2.1_2.1.27427.0 (Arm)
+echo Installing Arm Depedency....
 echo ============================================================
 echo.
-%PScommand% %Add% "Arm\*NET.Native.Framework*2.1*.appx"
-echo.
-echo ============================================================
-echo Installing Microsoft.NET.Native.Runtime.2.1_2.1.26424.0 (Arm)
-echo ============================================================
-echo.
-%PScommand% %Add% "Arm\*NET.Native.Runtime*2.1*.appx"
-echo.
-echo ============================================================
-echo Installing Microsoft.VCLibs.140 (Arm)
-echo ============================================================
-echo.
-%PScommand% %Add% "Arm\*Microsoft.VCLibs*140*.appx"
+%PScommand% %Add% "Arm\*arm*.appx"
 echo.
 echo ============================================================
 echo Depedency (Arm) Installed!
@@ -94,27 +85,18 @@ timeout 3
 goto :Menu
 
 :x64
-if not exist "x64\*NET.Native.Framework*2.1*x64*.appx" goto :nofiles
-if not exist "x64\*NET.Native.Runtime*2.1*x64*.appx" goto :nofiles
+if not exist "x64\*Framework*2.1*x64*.appx" goto :nofiles
+if not exist "x64\*Runtime*2.1*x64*.appx" goto :nofiles
 if not exist "x64\*Microsoft.VCLibs*140*x64*.appx" goto :nofiles
+if not exist "x64\*Framework*1.7*x64*.appx" goto :nofiles
+if not exist "x64\*Runtime*1.7*x64*.appx" goto :nofiles
+if not exist "x64\*UWPDesktop*x64*.appx" goto :nofiles
 echo.
 echo ============================================================
-echo Installing Microsoft.NET.Native.Framework.2.1_2.1.27427.0 (x64)[64 Bit]
+echo Installing x64 Depedency....
 echo ============================================================
 echo.
-%PScommand% %Add% "x64\*NET.Native.Framework*2.1*.appx"
-echo.
-echo ============================================================
-echo Installing Microsoft.NET.Native.Runtime.2.1_2.1.26424.0 (x64) [64 Bit]
-echo ============================================================
-echo.
-%PScommand% %Add% "x64\*NET.Native.Runtime*2.1*.appx"
-echo.
-echo ============================================================
-echo Installing Microsoft.VCLibs.140 (x64)
-echo ============================================================
-echo.
-%PScommand% %Add% "Arm\*Microsoft.VCLibs*140*.appx"
+%PScommand% %Add% "x64\*x64*.appx"
 echo.
 echo ============================================================
 echo Depedency x64 (64 Bit) Installed!
@@ -124,27 +106,18 @@ timeout 3
 goto :Menu
 
 :x86
-if not exist "x86\*NET.Native.Framework*2.1*x86*.appx" goto :nofiles
-if not exist "x86\*NET.Native.Runtime*2.1*x86*.appx" goto :nofiles
+if not exist "x86\*Framework*2.1*x86*.appx" goto :nofiles
+if not exist "x86\*Runtime*2.1*x86*.appx" goto :nofiles
 if not exist "x86\*Microsoft.VCLibs*140*x86*.appx" goto :nofiles
+if not exist "x86\*Framework*1.7*x86*.appx" goto :nofiles
+if not exist "x86\*Runtime*1.7*x86*.appx" goto :nofiles
+if not exist "x86\*UWPDesktop*x86*.appx" goto :nofiles
 echo.
 echo ============================================================
-echo Installing Microsoft.NET.Native.Framework.2.1_2.1.27427.0 (x86) [32 Bit]
+echo Installing x86 Depedency....
 echo ============================================================
 echo.
-%PScommand% %Add% "x86\*NET.Native.Framework*2.1*.appx"
-echo.
-echo ============================================================
-echo Installing Microsoft.NET.Native.Runtime.2.1_2.1.26424.0 (x86) [32 Bit]
-echo ============================================================
-echo.
-%PScommand% %Add% "x86\*NET.Native.Runtime*2.1*.appx"
-echo.
-echo ============================================================
-echo Installing Microsoft.VCLibs.140 (x86)
-echo ============================================================
-echo.
-%PScommand% %Add% "Arm\*Microsoft.VCLibs*140*.appx"
+%PScommand% %Add% "x86\*x86*.appx"
 echo.
 echo ============================================================
 echo Depedency x86 (32 Bit) Installed!
